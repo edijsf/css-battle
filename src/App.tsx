@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './App.css'
 import { Editor } from './MonacoEditor'
 import ResultViewport from './ResultViewport'
+import "./styles/App.css";
 
 function App() {
 

@@ -1,0 +1,22 @@
+.results {
+  display: flex;
+}
+
+.results__column {
+  position: relative;
+
+  width: 440px;
+  padding: 20px;
+  border-left: 1px solid #27313a;
+
+  background-color: #13181c;
+}
+
+.output-iframe {
+  width: 400px;
+  height: 300px;
+  border: 0;
+  outline: 0;
+  
+  background: white;
+}

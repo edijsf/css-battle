@@ -1,7 +1,9 @@
-import './ResultViewport.css'
+import './styles/ResultViewport.css'
 import * as htmlToImage from 'html-to-image';
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
 import { useEffect, useRef } from 'react';
+import targetImg from './assets/117.png'
+import { Compare } from './Compare';
 
 
 interface IResultViewportProps {
@@ -23,16 +25,24 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({value}) => {
       });
   },[value]);
   useEffect(()=> {
-    (document.getElementsByClassName("previewiframe")[0] as any).srcdoc = value;
+    (document.getElementsByClassName("output-iframe")[0] as any).srcdoc = value;
   }, [value])
   return (
-      <>
-      <div className='result' ref={ref} dangerouslySetInnerHTML={{__html: value}}>
-        
-      </div>
-      <iframe title="Preview" className='previewiframe' >
-      </iframe>
-      </>
+    <div className="results">
+    <div className="results__column">
+      <Compare
+        element={<iframe title="Preview" className="output-iframe"></iframe>}
+        overlay={<img className="target-image" src={targetImg}></img>}
+      />
+    </div>
+    <div className="results__column">
+      <div
+        className="target"
+        ref={ref}
+        dangerouslySetInnerHTML={{ __html: value }}
+      ></div>
+    </div>
+  </div>
   )
 }
 

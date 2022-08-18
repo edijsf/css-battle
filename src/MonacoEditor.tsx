@@ -1,6 +1,6 @@
 import {  useRef, useState, useEffect } from 'react';
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
-import styles from './MonacoEditor.module.css';
+import styles from './styles/MonacoEditor.module.css';
 
 interface IEditorProps {
     onDidChangeModelContent: (value : string) => void,
@@ -31,5 +31,5 @@ export const Editor: React.FC<IEditorProps> = (props) => {
 		return () => editor?.dispose();
 	}, [monacoEl.current]);
 
-	return <div className={styles.Editor} ref={monacoEl}></div>;
+	return <div className={styles.editor} ref={monacoEl}></div>;
 };
