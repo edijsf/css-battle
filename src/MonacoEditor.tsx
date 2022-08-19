@@ -22,7 +22,6 @@ export const Editor: React.FC<IEditorProps> = (props) => {
                 fontSize: 14
             });
             newEditor.onDidChangeModelContent(()=>{
-                console.log("aa");
                 props.onDidChangeModelContent(newEditor.getValue())   
             });
             
