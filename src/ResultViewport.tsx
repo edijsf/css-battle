@@ -2,7 +2,7 @@ import './styles/ResultViewport.css'
 import * as htmlToImage from 'html-to-image';
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
 import { useEffect, useReducer, useRef } from 'react';
-import targetImg from './assets/cgi.png'
+import targetImg from './assets/batman.png'
 import { Compare } from './Compare';
 
 
