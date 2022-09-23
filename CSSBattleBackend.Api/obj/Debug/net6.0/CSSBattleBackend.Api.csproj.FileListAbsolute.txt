@@ -1,0 +1,12 @@
+C:\Repository\CssBattle\CSSBattleBackend.Api\bin\Debug\net6.0\CSSBattleBackend.Api.deps.json
+C:\Repository\CssBattle\CSSBattleBackend.Api\bin\Debug\net6.0\CSSBattleBackend.Api.dll
+C:\Repository\CssBattle\CSSBattleBackend.Api\bin\Debug\net6.0\CSSBattleBackend.Api.pdb
+C:\Repository\CssBattle\CSSBattleBackend.Api\obj\Debug\net6.0\CSSBattleBackend.Api.csproj.AssemblyReference.cache
+C:\Repository\CssBattle\CSSBattleBackend.Api\obj\Debug\net6.0\CSSBattleBackend.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repository\CssBattle\CSSBattleBackend.Api\obj\Debug\net6.0\CSSBattleBackend.Api.AssemblyInfoInputs.cache
+C:\Repository\CssBattle\CSSBattleBackend.Api\obj\Debug\net6.0\CSSBattleBackend.Api.AssemblyInfo.cs
+C:\Repository\CssBattle\CSSBattleBackend.Api\obj\Debug\net6.0\CSSBattleBackend.Api.csproj.CoreCompileInputs.cache
+C:\Repository\CssBattle\CSSBattleBackend.Api\obj\Debug\net6.0\CSSBattleBackend.Api.dll
+C:\Repository\CssBattle\CSSBattleBackend.Api\obj\Debug\net6.0\refint\CSSBattleBackend.Api.dll
+C:\Repository\CssBattle\CSSBattleBackend.Api\obj\Debug\net6.0\CSSBattleBackend.Api.pdb
+C:\Repository\CssBattle\CSSBattleBackend.Api\obj\Debug\net6.0\ref\CSSBattleBackend.Api.dll
