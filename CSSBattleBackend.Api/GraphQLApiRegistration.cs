@@ -21,6 +21,7 @@ public static class GraphQLApiRegistration
         });
 
         services.AddSingleton<HelloWorldTestRepository>();
+        //services.Configure<GraphQLSettings>
 
         return services;
     }
