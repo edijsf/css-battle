@@ -4,8 +4,9 @@ import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
 import { useEffect, useReducer, useRef } from "react";
 import targetImg from "./assets/batman.png";
 import { Compare } from "./Compare";
-import ColorPalete from "./components/sections/example/colors/ColorPalete";
+import ColorPalete from "./components/sections/example/colorsSection/ColorPalete";
 import StatsSection from "./components/sections/result/StatsSection";
+import NotificationAlert from "./components/sections/example/notification/NotificationAlert";
 
 interface IResultViewportProps {
   value: string;
@@ -40,10 +41,11 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
         />
         <StatsSection />
       </div>
-      <div className="results__column">
+      <div className="results__column relative overflow-hidden">
         <img className="target-image" src={targetImg}></img>
         <ColorPalete colors={colors} />
         <img ref={imgref}></img>
+        <NotificationAlert />
       </div>
     </div>
   );

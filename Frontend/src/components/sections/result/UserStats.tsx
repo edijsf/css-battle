@@ -10,7 +10,7 @@ const UserStats = ({}: Props) => {
       transition={{
         duration: 0.1,
         type: "spring",
-        damping: 15,
+        damping: 30,
         stiffness: 500,
       }}
       className="h-44 w-full bg-slate-500"

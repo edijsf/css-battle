@@ -11,7 +11,7 @@ const GlobalStats = ({}: Props) => {
       transition={{
         duration: 0.1,
         type: "spring",
-        damping: 15,
+        damping: 30,
         stiffness: 500,
       }}
       className="h-44 w-full bg-amber-200"
