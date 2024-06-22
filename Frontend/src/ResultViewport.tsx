@@ -27,22 +27,25 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
   }, [value]);
 
   return (
-    <div className="results">
-      <div className="results__column">
-        <Compare
-          element={
-            <iframe
-              ref={ref}
-              title="Preview"
-              className="output-iframe"
-            ></iframe>
-          }
-          overlay={<img className="target-image" src={targetImg}></img>}
-        />
+    <div className="flex flex-row bg-theme-800 w-auto">
+      <div className="relative w-[440px] border-theme-400 border-l flex flex-col">
+        <div className="flex items-center justify-center p-5">
+          <Compare
+            element={
+              <iframe
+                ref={ref}
+                title="Preview"
+                className="output-iframe"
+              ></iframe>
+            }
+            overlay={<img className="target-image" src={targetImg}></img>}
+          />
+        </div>
+
         <StatsSection />
       </div>
-      <div className="results__column relative overflow-hidden">
-        <img className="target-image" src={targetImg}></img>
+      <div className="relative p-5 w-[440px] border-l border-theme-400 overflow-hidden">
+        <img className="w-[400px] h-[300px]" src={targetImg}></img>
         <ColorPalete colors={colors} />
         <img ref={imgref}></img>
         <NotificationAlert />

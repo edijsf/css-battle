@@ -82,7 +82,7 @@ export const Compare: React.FC<ICompareProps> = ({ element, overlay }) => {
       >
         {element}
       </div>
-      <div className="compare__overlay">{overlay}</div>
+      <div className="absolute top-5 left-5">{overlay}</div>
     </div>
   );
 };

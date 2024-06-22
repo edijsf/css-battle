@@ -1,14 +1,3 @@
-.results {
-  display: flex;
-}
-
-.results__column {
-  position: relative;
-  width: 440px;
-  padding: 20px;
-  border-left: 1px solid #27313a;
-  background-color: #13181c;
-}
 
 .output-iframe {
   width: 400px;

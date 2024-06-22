@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import UserCard from "./leaderboard/UserCard";
 
 interface Props extends SFC {}
 
@@ -14,9 +15,44 @@ const GlobalStats = ({}: Props) => {
         damping: 30,
         stiffness: 500,
       }}
-      className="h-44 w-full bg-amber-200"
+      className="h-full w-full"
     >
-      <div className="font-black text-theme-200">Global</div>
+      <div className="font-black text-theme-200 gap-2 flex flex-col">
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard /> <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+      </div>
     </motion.div>
   );
 };

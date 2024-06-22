@@ -13,10 +13,11 @@ export default {
           500: "#0060ca",
           600: "#07080b",
           700: "#121518",
+          800: "#13181c",
           cgi: "#e11937",
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
