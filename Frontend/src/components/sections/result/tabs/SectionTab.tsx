@@ -9,7 +9,7 @@ const SectionTab = ({ children, className = "", onClick, active }: Props) => {
     <div
       className={`${className} 
      
-      flex cursor-pointer flex-1 z-30 items-center justify-center text-sm rounded-full`}
+      flex cursor-pointer flex-1 z-30 items-center justify-center text-sm rounded-full font-bold`}
       onClick={onClick}
     >
       {children}

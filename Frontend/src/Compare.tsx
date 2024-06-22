@@ -72,7 +72,7 @@ export const Compare: React.FC<ICompareProps> = ({ element, overlay }) => {
       onDragStart={(event) => event.preventDefault()}
     >
       <div
-        className="compare__visible"
+        className="compare__visible relative"
         style={{
           width: shiftPressed ? "100%" : width,
           height: shiftPressed ? height : "100%",

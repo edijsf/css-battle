@@ -6,7 +6,7 @@ import targetImg from "./assets/batman.png";
 import { Compare } from "./Compare";
 import ColorPalete from "./components/sections/example/colorsSection/ColorPalete";
 import StatsSection from "./components/sections/result/StatsSection";
-import NotificationAlert from "./components/sections/example/notification/NotificationAlert";
+import NotificationAlert from "./components/notifications/NotificationsWrapper";
 
 interface IResultViewportProps {
   value: string;

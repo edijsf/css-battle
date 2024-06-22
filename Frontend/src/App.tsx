@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen flex flex-1 flex-col w-screen">
+    <div className="h-screen flex flex-1 flex-col w-screen font-mono">
       <h1 className="font-black text-3xl">CGI CSS Battleground</h1>
       <div className="h-full flex-row flex w-full">
         <Editor
