@@ -73,18 +73,18 @@ const users = [
 
 const GlobalStats = ({}: Props) => {
   const container = {
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0 },
     show: {
       opacity: 1,
       y: 0,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.05,
       },
     },
   };
 
   const item = {
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
   };
 

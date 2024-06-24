@@ -15,7 +15,7 @@ const UserStats = ({}: Props) => {
         damping: 30,
         stiffness: 500,
       }}
-      className="full w-full flex-row flex gap-2 pt-5"
+      className="full w-full flex-row flex gap-2 pt-3"
     >
       <div className="flex-col relative p-2 text-theme-200 flex flex-1 border border-theme-400 h-16 rounded-xl items-center justify-center">
         <div className="absolute -top-5 bg-theme-800 p-2">

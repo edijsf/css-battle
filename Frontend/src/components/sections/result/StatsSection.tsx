@@ -41,7 +41,7 @@ const StatsSection = ({}: Props) => {
         </div>
       </div>
 
-      <div className="h-full w-full mt-4 mb-5 overflow-y-auto relative scrollbar-thin scrollbar-thumb-slate-200 px-5">
+      <div className="h-full w-full mt-6 mb-5 overflow-y-auto relative scrollbar-thin scrollbar-thumb-slate-200 px-5">
         <div className="absolute inset-0 px-[14px]">
           {
             {

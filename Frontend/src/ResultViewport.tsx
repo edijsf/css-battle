@@ -30,7 +30,7 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
   return (
     <div className="flex flex-row bg-theme-800 w-auto">
       <div className="relative w-[440px] border-theme-400 border-l flex flex-col">
-        <div className="flex items-center justify-center px-5 pt-5">
+        <div className="flex items-center justify-center relative pt-5">
           <Compare
             element={
               <iframe
@@ -39,7 +39,9 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
                 className="output-iframe"
               ></iframe>
             }
-            overlay={<img className="target-image" src={targetImg}></img>}
+            overlay={
+              <img className="target-image relative" src={targetImg}></img>
+            }
           />
         </div>
 
