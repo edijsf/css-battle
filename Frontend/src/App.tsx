@@ -19,7 +19,7 @@ function App() {
   const [editorvalue, setEditorValue] = useState<string>(initialValue);
   const onEditorValueChanged = (value: string) => {
     setEditorValue(value);
-    console.log(value);
+    // console.log(value);
   };
 
   return (

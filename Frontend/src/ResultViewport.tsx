@@ -1,10 +1,9 @@
 import "./styles/ResultViewport.css";
 import * as htmlToImage from "html-to-image";
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
-import { useEffect, useReducer, useRef } from "react";
+import { useEffect, useRef } from "react";
 import targetImg from "./assets/batman.png";
 import { Compare } from "./Compare";
-import ColorPalete from "./components/sections/example/colorsSection/ColorPalete";
 import StatsSection from "./components/sections/result/StatsSection";
 import NotificationAlert from "./components/notifications/NotificationsWrapper";
 import ColorsSection from "./components/sections/example/ColorsSection";
