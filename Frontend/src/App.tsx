@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Editor } from "./MonacoEditor";
 import ResultViewport from "./ResultViewport";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const initialValue = [
@@ -32,6 +33,7 @@ function App() {
         />
         <ResultViewport value={editorvalue} />
       </div>
+      <Footer />
     </div>
   );
 }

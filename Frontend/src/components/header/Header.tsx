@@ -4,7 +4,7 @@ interface Props extends SFC {}
 const Header = ({ className = "" }: Props) => {
   return (
     <div
-      className={` ${className} w-full h-6 bg-theme-400 flex flex-row items-center border-t border-theme-300/15`}
+      className={` ${className} w-full h-8 bg-theme-400 flex flex-row items-center border-t border-theme-300/15`}
     >
       <div className="flex flex-1 font-bold px-5 items-center text-xs">
         Editor
