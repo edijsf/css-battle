@@ -1,13 +1,11 @@
 import React from "react";
+import Seperator from "../../../seperator/Seperator";
 
 interface Props extends SFC {}
 const TargetSponsor = ({ children, className = "" }: Props) => {
   return (
     <div className="">
-      <div className="font-black text-theme-200 flex flex-row items-center gap-3 mt-6">
-        <span className="whitespace-nowrap">Target Sponsor</span>
-        <hr className="bg-theme-400 w-full h-0.5 border-0" />
-      </div>
+      <Seperator>Target Sponsor</Seperator>
       <div className="text-theme-300/50 mt-4">Davids Rjabovs</div>
       <div className="text-theme-300/50">Best DEV Ever!</div>
     </div>
@@ -15,5 +13,3 @@ const TargetSponsor = ({ children, className = "" }: Props) => {
 };
 
 export default TargetSponsor;
-
-//  ${active && "bg-theme-400"}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Editor } from "./MonacoEditor";
 import ResultViewport from "./ResultViewport";
-import "./styles/App.css";
+import Header from "./components/header/Header";
 
 function App() {
   const initialValue = [
@@ -24,6 +24,7 @@ function App() {
   return (
     <div className="h-screen flex flex-1 flex-col w-screen font-mono">
       <h1 className="font-black text-3xl">CGI CSS Battleground</h1>
+      <Header />
       <div className="h-full flex-row flex w-full">
         <Editor
           onDidChangeModelContent={onEditorValueChanged}
