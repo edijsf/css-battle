@@ -9,6 +9,7 @@ export const Compare: React.FC<ICompareProps> = ({ element, overlay }) => {
   const [width, setWidth] = useState(400);
   const [height, setHeight] = useState(300);
   const [shiftPressed, setShiftPressed] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   const refCompare = useRef<HTMLDivElement>(null);
 
@@ -30,6 +31,7 @@ export const Compare: React.FC<ICompareProps> = ({ element, overlay }) => {
     } else {
       setWidth(400);
     }
+    setHovered(false);
   };
 
   const handleKeyDown = (event: KeyboardEvent) => {
@@ -70,12 +72,13 @@ export const Compare: React.FC<ICompareProps> = ({ element, overlay }) => {
       onMouseMove={onSlide}
       onMouseLeave={onMouseLeave}
       onDragStart={(event) => event.preventDefault()}
+      onMouseEnter={() => setHovered(true)}
     >
       <div
-        className="compare__visible relative"
+        className={`compare__visible relative ${hovered && "opacity-95"}`}
         style={{
-          width: shiftPressed ? "100%" : width,
-          height: shiftPressed ? height : "100%",
+          width: shiftPressed && hovered ? "100%" : width,
+          height: shiftPressed && hovered ? height : "100%",
           boxShadow: drawRedLine(shiftPressed ? height : width),
         }}
         ref={refCompare}

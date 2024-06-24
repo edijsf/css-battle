@@ -11,36 +11,37 @@ export const Editor: React.FC<IEditorProps> = (props) => {
     useState<monaco.editor.IStandaloneCodeEditor | null>(null);
   const monacoEl = useRef(null);
 
-  //   useEffect(() => {
-  //     if (monacoEl && !editor) {
-  //       const newEditor = monaco.editor.create(monacoEl.current!, {
-  //         value: props.initialValue,
-  //         language: "html",
-  //         theme: "vs-dark",
-  //         automaticLayout: false,
-  //         minimap: { enabled: false },
-  //         contextmenu: false,
-  //         fontSize: 14,
-  //       });
-  //       newEditor.onDidChangeModelContent(() => {
-  //         props.onDidChangeModelContent(newEditor.getValue());
-  //       });
+  // useEffect(() => {
+  //   if (monacoEl && !editor) {
+  //     const newEditor = monaco.editor.create(monacoEl.current!, {
+  //       value: props.initialValue,
+  //       language: "html",
+  //       theme: "vs-dark",
+  //       automaticLayout: false,
+  //       minimap: { enabled: false },
+  //       contextmenu: false,
+  //       fontSize: 14,
+  //     });
+  //     newEditor.onDidChangeModelContent(() => {
+  //       props.onDidChangeModelContent(newEditor.getValue());
+  //     });
 
-  //       setEditor(newEditor);
-  //     }
-  //     return () => editor?.dispose();
-  //   }, []);
+  //     setEditor(newEditor);
+  //   }
+  //   return () => editor?.dispose();
+  // }, [monacoEl.current]);
 
   useEffect(() => {
     if (monacoEl.current && !editor) {
       const newEditor = monaco.editor.create(monacoEl.current, {
         value: props.initialValue,
         language: "html",
-        theme: "vs-dark",
-        automaticLayout: false,
+        automaticLayout: true,
         minimap: { enabled: false },
         contextmenu: false,
         fontSize: 14,
+        theme: "vs-dark",
+        padding: { top: 20 },
       });
 
       newEditor.onDidChangeModelContent(() => {
@@ -57,5 +58,5 @@ export const Editor: React.FC<IEditorProps> = (props) => {
     }
   }, []);
 
-  return <div className="flex flex-1 h-full" ref={monacoEl}></div>;
+  return <div className="flex flex-1 h-full" ref={monacoEl} />;
 };

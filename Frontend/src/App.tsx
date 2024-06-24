@@ -19,12 +19,10 @@ function App() {
   const [editorvalue, setEditorValue] = useState<string>(initialValue);
   const onEditorValueChanged = (value: string) => {
     setEditorValue(value);
-    // console.log(value);
   };
 
   return (
     <div className="h-screen flex flex-1 flex-col w-screen font-mono">
-      <h1 className="font-black text-3xl">CGI CSS Battleground</h1>
       <Header />
       <div className="h-full flex-row flex w-full">
         <Editor

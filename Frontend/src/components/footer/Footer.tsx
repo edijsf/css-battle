@@ -10,7 +10,7 @@ const Footer = ({ className = "" }: Props) => {
         @ 2024 CGI CSSBattle
       </div>
       <div className="font-bold text-xs px-5 flex items-center text-theme-50 h-full hover:underline cursor-pointer">
-        Just play - don't be dump!
+        Just use your brain - don't be dump!
       </div>
     </div>
   );
