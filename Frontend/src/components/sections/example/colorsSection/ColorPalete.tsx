@@ -14,18 +14,15 @@ const ColorPalete = ({ colors }: Props) => {
     addNotification({ content: color, id: id });
   };
   return (
-    <div>
-      <div className="font-black text-theme-200">Colors</div>
-      <div className="w-full flex flex-row flex-wrap gap-2 mt-3">
-        {colors.map((color, index) => (
-          <div key={index}>
-            <ColorCard onClick={() => selectColor(color, index)}>
-              <ColorCard.ColorBubble color={color} />
-              <ColorCard.ColorHex hex={color} />
-            </ColorCard>
-          </div>
-        ))}
-      </div>
+    <div className="w-full flex flex-row flex-wrap gap-2 mt-3">
+      {colors.map((color, index) => (
+        <div key={index}>
+          <ColorCard onClick={() => selectColor(color, index)}>
+            <ColorCard.ColorBubble color={color} />
+            <ColorCard.ColorHex hex={color} />
+          </ColorCard>
+        </div>
+      ))}
     </div>
   );
 };

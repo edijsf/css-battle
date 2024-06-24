@@ -15,7 +15,7 @@ const StatsSection = ({}: Props) => {
   const [section, setSection] = useState<keyof typeof Sections>(Sections.User);
 
   return (
-    <div className="mt-8 flex-1 flex flex-col h-full px-2">
+    <div className="mt-6 flex-1 flex flex-col h-full px-2">
       <div className="w-full px-[14px]">
         <div className="w-full border border-theme-400 h-9 rounded-full flex items-center justify-center p-1">
           <div className="w-full flex flex-row relative h-full">

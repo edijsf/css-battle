@@ -7,6 +7,8 @@ import { Compare } from "./Compare";
 import ColorPalete from "./components/sections/example/colorsSection/ColorPalete";
 import StatsSection from "./components/sections/result/StatsSection";
 import NotificationAlert from "./components/notifications/NotificationsWrapper";
+import ColorsSection from "./components/sections/example/ColorsSection";
+import TargetSponsor from "./components/sections/result/sponsor/TargetSponsor";
 
 interface IResultViewportProps {
   value: string;
@@ -29,7 +31,7 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
   return (
     <div className="flex flex-row bg-theme-800 w-auto">
       <div className="relative w-[440px] border-theme-400 border-l flex flex-col">
-        <div className="flex items-center justify-center p-5">
+        <div className="flex items-center justify-center px-5 pt-5">
           <Compare
             element={
               <iframe
@@ -46,7 +48,8 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
       </div>
       <div className="relative p-5 w-[440px] border-l border-theme-400 overflow-hidden">
         <img className="w-[400px] h-[300px]" src={targetImg}></img>
-        <ColorPalete colors={colors} />
+        <ColorsSection colors={colors} />
+        <TargetSponsor />
         <img ref={imgref}></img>
         <NotificationAlert />
       </div>
