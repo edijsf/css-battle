@@ -15,7 +15,7 @@ const StatsSection = ({}: Props) => {
   const [section, setSection] = useState<keyof typeof Sections>(Sections.User);
 
   return (
-    <div className="mt-6 flex-1 flex flex-col h-full px-2">
+    <div className="mt-3 flex-1 flex flex-col h-full px-2">
       <div className="w-full px-[14px]">
         <div className="w-full border border-theme-400 h-9 rounded-full flex items-center justify-center p-1">
           <div className="w-full flex flex-row relative h-full">
@@ -41,7 +41,7 @@ const StatsSection = ({}: Props) => {
         </div>
       </div>
 
-      <div className="h-full w-full mt-6 mb-5 overflow-y-auto relative scrollbar-thin scrollbar-thumb-slate-200 px-5">
+      <div className="h-full w-full mt-6 mb-5 overflow-y-auto relative scrollbar-thin scrollbar-thumb-theme-300/50 scrollbar-track-theme-400 px-5">
         <div className="absolute inset-0 px-[14px]">
           {
             {

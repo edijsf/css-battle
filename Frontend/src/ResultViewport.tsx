@@ -30,7 +30,7 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
   return (
     <div className="flex flex-row bg-theme-800 w-auto">
       <div className="relative w-[440px] border-theme-400 border-l flex flex-col">
-        <div className="flex items-center justify-center relative pt-5">
+        <div className="flex items-center h-[340px] justify-center relative">
           <Compare
             element={
               <iframe
