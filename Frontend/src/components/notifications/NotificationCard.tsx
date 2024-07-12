@@ -30,7 +30,7 @@ const NotificationCard = ({ notification }: Props) => {
       }}
       className={`m-2 rounded-md gap-3 relative flex flex-row bg-theme-600 py-2 text-white`}
     >
-      <img src={Info} alt="Star img" className="ml-2" />
+      <img src={Info} alt="Info img" className="ml-2" />
       <div className="text-sm px-2">
         Color <span className="font-bold">{notification.content}</span> copied
         to clipboard

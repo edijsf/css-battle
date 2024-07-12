@@ -88,11 +88,11 @@ export const Compare: React.FC<ICompareProps> = ({ element, overlay }) => {
       </div>
       <div className="absolute top-5 left-5 z-10">{overlay}</div>
       <div
-        className={`h-5 w-8 bg-theme-cgi pointer-events-none absolute z-50 rounded-md flex items-center justify-center -bottom-4 text-sm font-bold
+        className={`h-5 w-8 bg-special-cgi pointer-events-none absolute z-50 rounded-md flex items-center justify-center -bottom-4 text-sm font-bold
          
           ${!hovered && "hidden"}`}
         style={{
-          right: shiftPressed ? 0 : 440 - width - 40,
+          right: shiftPressed ? 0 : 440 - width - 38,
           bottom: shiftPressed ? 324 - height - 16 : 0,
         }}
       >

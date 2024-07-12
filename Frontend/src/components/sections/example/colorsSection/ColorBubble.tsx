@@ -7,7 +7,7 @@ export interface ColorBubbleProps extends SFC {
 const ColorBubble = ({ color }: ColorBubbleProps) => {
   return (
     <div
-      className="w-5 h-5 border border-black rounded-full"
+      className="w-5 h-5 border dark:border-black border-dark-400 rounded-full"
       style={{
         backgroundColor: color,
       }}

@@ -19,7 +19,7 @@ const ColorCard: React.FC<Props> & DotNotation = ({
   return (
     <button
       onClick={onClick}
-      className={`flex flex-row w-min gap-3 bg-theme-400 rounded-full py-1 pl-2 pr-3 items-center justify-between hover:scale-105 active:scale-90 duration-300 ${className}`}
+      className={`flex flex-row w-min gap-3 dark:bg-dark-400 bg-light-400 rounded-full py-1 pl-2 pr-3 items-center justify-between hover:scale-105 active:scale-90 duration-300 ${className}`}
     >
       {children}
     </button>

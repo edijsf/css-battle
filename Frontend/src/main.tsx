@@ -4,11 +4,14 @@ import App from "./App";
 import "./styles/index.css";
 import "./userWorker";
 import { NotificationProvider } from "./contexts/NotificationContext";
+import ThemeWrapper from "./contexts/ThemeWrapper";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <NotificationProvider>
-      <App />
+      <ThemeWrapper>
+        <App />
+      </ThemeWrapper>
     </NotificationProvider>
   </React.StrictMode>
 );

@@ -6,7 +6,9 @@ export interface ColorHexProps extends SFC {
 
 const ColorHex = ({ hex }: ColorHexProps) => {
   return (
-    <div className="text-theme-300 font-bold uppercase text-xs">{hex}</div>
+    <div className=" dark:text-dark-300 text-dark-400 font-bold uppercase text-xs">
+      {hex}
+    </div>
   );
 };
 

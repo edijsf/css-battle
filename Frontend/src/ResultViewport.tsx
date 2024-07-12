@@ -28,8 +28,8 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
   }, [value]);
 
   return (
-    <div className="flex flex-row bg-theme-800 w-auto">
-      <div className="relative w-[440px] border-theme-400 border-l flex flex-col">
+    <div className="flex flex-row dark:bg-dark-600 bg-light-800 w-auto">
+      <div className="relative w-[440px] dark:border-dark-400 border-dark-300/50 border-l flex flex-col">
         <div className="flex items-center h-[340px] justify-center relative">
           <Compare
             element={
@@ -47,7 +47,7 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
 
         <StatsSection />
       </div>
-      <div className="relative p-5 w-[440px] border-l border-theme-400 overflow-hidden">
+      <div className="relative p-5 w-[440px] border-l border-dark-300/50 dark:border-dark-400 overflow-hidden">
         <img className="w-[400px] h-[300px]" src={targetImg}></img>
         <ColorsSection colors={colors} />
         <TargetSponsor />
