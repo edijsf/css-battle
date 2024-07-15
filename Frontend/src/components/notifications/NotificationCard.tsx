@@ -28,15 +28,15 @@ const NotificationCard = ({ notification }: Props) => {
           stiffness: 100,
         },
       }}
-      className={`m-2 rounded-md gap-3 relative flex flex-row bg-theme-600 py-2 text-white`}
+      className={`m-2 rounded-md gap-3 relative flex flex-row dark:bg-dark-800 bg-light-600 py-2 text-white`}
     >
       <img src={Info} alt="Info img" className="ml-2" />
-      <div className="text-sm px-2">
+      <div className="text-sm px-2 dark:text-dark-100 text-dark-600">
         Color <span className="font-bold">{notification.content}</span> copied
         to clipboard
       </div>
       <motion.div
-        className="h-1 bg-theme-500 w-full rounded-b-md absolute bottom-0"
+        className="h-1 bg-special-blue w-full rounded-b-md absolute bottom-0"
         initial={{ width: "100%" }}
         whileInView={{ width: 0 }}
         transition={{

@@ -7,7 +7,7 @@ const NotificationsWrapper: React.FC = () => {
   const { notifications } = useNotifications();
 
   return (
-    <div className="absolute bottom-20 right-0 z-[999] w-3/5">
+    <div className="absolute bottom-0 right-0 z-[999] w-3/5">
       <AnimatePresence>
         {notifications.map((notification) => {
           return (
