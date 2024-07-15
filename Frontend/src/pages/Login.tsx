@@ -2,18 +2,23 @@ import React, { useState } from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import { Button } from "../ui/button/Button";
+import CGI from '/cgi-logo.svg'
 
-interface Props extends SFC {}
+interface Props extends SFC { }
 
-const Login = ({}: Props) => {
+const Login = ({ }: Props) => {
   return (
     <div className="h-screen flex flex-1 flex-col w-screen font-mono dark:bg-dark-800 bg-light-800">
       <Header />
       <div className="h-full flex w-full items-center justify-center flex-col">
+        <div className="w-full h-36 mb-16">
+
+          <img src={CGI} alt="Info img" className="h-full w-full" />
+        </div>
         <div className="flex-row flex rounded-lg dark:bg-dark-600 bg-light-600 w-1/3 h-1/6 items-center justify-center px-10 shadow-lg dark:shadow-inner dark:shadow-dark-300/30">
           <input
             placeholder="Your username"
-            className="h-10 px-3 whitespace-nowrap focus:outline-special-gold focus:dark:outline-dark-500 z-50 w-full text-slate-800 dark:text-dark-50 dark:bg-dark-700 rounded-l-full border border-light-400 dark:border-dark-400"
+            className="h-10 px-3 whitespace-nowrap focus:!border-special-gold focus:border-2 outline-none z-50 w-full text-slate-800 dark:text-dark-50 dark:bg-dark-700 rounded-l-full border border-light-400 dark:border-dark-400"
           />
           <Button
             label="Join"
@@ -38,7 +43,7 @@ const Login = ({}: Props) => {
       </div>
 
       <Footer />
-    </div>
+    </div >
   );
 };
 

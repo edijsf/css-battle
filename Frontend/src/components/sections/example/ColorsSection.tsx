@@ -10,7 +10,6 @@ const ColorsSection = ({ colors }: Props) => {
   return (
     <div>
       <Seperator>Colors</Seperator>
-
       <ColorPalete colors={colors} />
     </div>
   );

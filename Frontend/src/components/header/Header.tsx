@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../ui/button/Button";
-import ContentWrapper from "../wrappers/ContentWrapper";
 import { useThemeContext } from "../../contexts/ThemeWrapper";
 import { Toggle } from "../../ui/toggle/Toggle";
 import { HiSun } from "react-icons/hi";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import LiveCount from "../liveCount/LiveCount";
 
-interface Props extends SFC {}
+interface Props extends SFC { }
 const Header = ({ className = "" }: Props) => {
   const { isDark, toggleTheme } = useThemeContext();
 
@@ -22,8 +22,8 @@ const Header = ({ className = "" }: Props) => {
           </h1>
         </Link>
       </div>
-      <div className="flex flex- h-full items-center">
-        <div className="py-2 px-5">Here will be live count</div>
+      <div className="flex gap-5 h-full items-center">
+        <LiveCount />
 
         <Toggle checked={isDark} onClick={toggleTheme}>
           <Toggle.Box className="">
@@ -39,16 +39,12 @@ const Header = ({ className = "" }: Props) => {
               }}
             </Toggle.Slider>
           </Toggle.Box>
-          {/* <Toggle.Label className="text-light-900 transition-all dark:text-white">
-            {`Switch to ${isDark ? "light" : "dark"}`}
-          </Toggle.Label> */}
+
         </Toggle>
 
-        <div className="py-2 px-5">
-          <Link to="/login">
-            <Button label="Sign In/Sign Up" variant="primary" />
-          </Link>
-        </div>
+        <Link to="/login">
+          <Button label="Sign In/Sign Up" variant="primary" />
+        </Link>
       </div>
     </div>
   );
