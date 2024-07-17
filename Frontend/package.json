@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "express": "^4.19.2",
     "framer-motion": "^11.2.11",
     "html-to-image": "^1.10.4",
     "monaco-editor": "^0.34.0",

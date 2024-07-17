@@ -6,9 +6,9 @@ import Footer from "../components/footer/Footer";
 import HeaderHelper from "../components/header/HeaderHelper";
 import { Button } from "../ui/button/Button";
 
-interface Props extends SFC {}
+interface Props extends SFC { }
 
-const Play = ({}: Props) => {
+const Play = ({ }: Props) => {
   const initialValue = [
     '<div class="div"></div>',
     "<style>",
@@ -26,11 +26,11 @@ const Play = ({}: Props) => {
   };
 
   return (
-    <div className="h-screen flex flex-1 flex-col w-screen font-mono">
+    <div className="h-screen flex flex-1 flex-col w-screen font-mono dark:bg-dark-600 bg-light-600">
       <Header />
       <HeaderHelper />
       <div className="h-full flex-row flex w-full">
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col flex-1">
           <Editor
             onDidChangeModelContent={onEditorValueChanged}
             initialValue={initialValue}

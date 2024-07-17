@@ -10,9 +10,10 @@ interface IEditorProps {
 export const Editor: React.FC<IEditorProps> = (props) => {
   const { isDark } = useThemeContext();
 
-  const [editor, setEditor] =
-    useState<monaco.editor.IStandaloneCodeEditor | null>(null);
+  const [editor, setEditor] = useState<monaco.editor.IStandaloneCodeEditor | null>(null);
   const monacoEl = useRef(null);
+
+
 
   useEffect(() => {
     if (monacoEl.current && !editor) {
@@ -47,7 +48,7 @@ export const Editor: React.FC<IEditorProps> = (props) => {
     }
   }, [isDark, editor]);
 
-  return <div className="flex flex-1 h-full" ref={monacoEl} />;
+  return <div className="flex flex-1" ref={monacoEl} />;
 };
 
 // useEffect(() => {
