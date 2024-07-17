@@ -48,7 +48,7 @@ export const Editor: React.FC<IEditorProps> = (props) => {
     }
   }, [isDark, editor]);
 
-  return <div className="flex flex-1" ref={monacoEl} />;
+  return <div className="flex flex-1 w-full" ref={monacoEl} />;
 };
 
 // useEffect(() => {

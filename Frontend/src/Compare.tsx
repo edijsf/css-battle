@@ -68,14 +68,12 @@ export const Compare: React.FC<ICompareProps> = ({ element, overlay }) => {
         onMouseLeave={onMouseLeave}
         onDragStart={(event) => event.preventDefault()}
         onMouseEnter={() => setHovered(true)}
-        className={`w-[400px] h-[300px] z-30 top-5 left-5 relative ${
-          shiftPressed && hovered && "cursor-row-resize"
-        } ${!shiftPressed && hovered && "cursor-col-resize"}`}
+        className={`w-[400px] h-[300px] z-30 top-5 left-5 relative ${shiftPressed && hovered && "cursor-row-resize"
+          } ${!shiftPressed && hovered && "cursor-col-resize"}`}
       >
         <div
-          className={`pointer-events-none overflow-hidden z-[9999] ${
-            hovered && "opacity-95"
-          }`}
+          className={`pointer-events-none overflow-hidden z-[9999] ${hovered && "opacity-95"
+            }`}
           style={{
             width: shiftPressed && hovered ? "100%" : width,
             height: shiftPressed && hovered ? height : "100%",
@@ -88,7 +86,7 @@ export const Compare: React.FC<ICompareProps> = ({ element, overlay }) => {
       </div>
       <div className="absolute top-5 left-5 z-10">{overlay}</div>
       <div
-        className={`h-5 w-8 bg-special-cgi pointer-events-none absolute z-50 rounded-md flex items-center justify-center -bottom-4 text-sm font-bold
+        className={`h-5 w-8 bg-special-cgi text-dark-50 pointer-events-none absolute z-50 rounded-md flex items-center justify-center -bottom-4 text-sm font-bold
          
           ${!hovered && "hidden"}`}
         style={{

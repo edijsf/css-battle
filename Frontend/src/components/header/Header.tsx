@@ -13,16 +13,17 @@ const Header = ({ className = "" }: Props) => {
 
   return (
     <div
-      className={` ${className} flex flex-row justify-between w-full bg-light-600 dark:bg-dark-600 px-10`}
+      className={` ${className} flex flex-row justify-between w-full bg-light-600 dark:bg-dark-600 px-2 md:px-10`}
     >
       <div className="py-2">
         <Link to="/">
+
           <h1 className="font-black text-3xl text-slate-800 dark:text-dark-50">
-            CGI CSS Battleground
+            CGI <span className="max-sm:hidden">CSS Battleground</span>
           </h1>
         </Link>
       </div>
-      <div className="flex gap-5 h-full items-center">
+      <div className="flex gap-2 md:gap-5 h-full items-center">
         <LiveCount />
 
         <Toggle checked={isDark} onClick={toggleTheme}>
@@ -43,7 +44,7 @@ const Header = ({ className = "" }: Props) => {
         </Toggle>
 
         <Link to="/login">
-          <Button label="Sign In/Sign Up" variant="primary" />
+          <Button label="Sign In" variant="primary" />
         </Link>
       </div>
     </div>

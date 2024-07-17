@@ -28,19 +28,23 @@ const Play = ({ }: Props) => {
   return (
     <div className="h-screen flex flex-1 flex-col w-screen font-mono dark:bg-dark-600 bg-light-600">
       <Header />
-      <HeaderHelper />
-      <div className="h-full flex-row flex w-full">
-        <div className="flex flex-col flex-1">
-          <Editor
-            onDidChangeModelContent={onEditorValueChanged}
-            initialValue={initialValue}
-          />
-          <div className="h-12 dark:bg-dark-600 bg-light-600 flex items-center px-10 w-full border-t dark:border-dark-400">
-            <Button label="Submit" variant="primaryBlue" className="!px-14" />
-          </div>
-        </div>
 
-        <ResultViewport value={editorvalue} />
+      <div className="h-full flex-1 flex-col flex w-screen overflow-y-auto">
+        <HeaderHelper />
+        <div className="h-full flex-1 flex-row flex w-screen">
+
+          <div className="h-full flex flex-col flex-1 min-w-[380px] relative">
+            <Editor
+              onDidChangeModelContent={onEditorValueChanged}
+              initialValue={initialValue}
+            />
+            <div className="h-12 dark:bg-dark-600 bg-light-600 flex items-center max-sm:justify-center px-10 w-full border-t dark:border-dark-400">
+              <Button label="Submit" variant="primaryBlue" className="!px-14" />
+            </div>
+          </div>
+
+          <ResultViewport value={editorvalue} />
+        </div>
       </div>
       <Footer />
     </div>

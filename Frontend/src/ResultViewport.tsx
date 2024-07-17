@@ -28,7 +28,7 @@ export const ResultViewport: React.FC<IResultViewportProps> = ({ value }) => {
   }, [value]);
 
   return (
-    <div className="flex flex-row dark:bg-dark-600 bg-light-800 w-auto">
+    <div className="flex flex-row dark:bg-dark-600 bg-light-800">
       <div className="relative w-[440px] dark:border-dark-400 border-dark-300/50 border-l flex flex-col">
         <div className="flex items-center h-[340px] justify-center relative">
           <Compare
