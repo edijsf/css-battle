@@ -6,10 +6,16 @@ import { Toggle } from "../../ui/toggle/Toggle";
 import { HiSun } from "react-icons/hi";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import LiveCount from "../liveCount/LiveCount";
+import { useAuthContext } from "../../contexts/AuthContext";
 
 interface Props extends SFC { }
 const Header = ({ className = "" }: Props) => {
   const { isDark, toggleTheme } = useThemeContext();
+  const { user, logout } = useAuthContext()
+
+  const handleOnPress = () => {
+    logout()
+  }
 
   return (
     <div
@@ -44,7 +50,7 @@ const Header = ({ className = "" }: Props) => {
         </Toggle>
 
         <Link to="/login">
-          <Button label="Sign In" variant="primary" />
+          <Button label={user ? "Log Out" : "Sign in"} variant="primary" onClick={handleOnPress} />
         </Link>
       </div>
     </div>

@@ -5,13 +5,16 @@ import "./styles/index.css";
 import "./userWorker";
 import { NotificationProvider } from "./contexts/NotificationContext";
 import ThemeWrapper from "./contexts/ThemeWrapper";
+import AuthProvider from "./contexts/AuthContext";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <NotificationProvider>
-      <ThemeWrapper>
-        <App />
-      </ThemeWrapper>
-    </NotificationProvider>
+    <AuthProvider>
+      <NotificationProvider>
+        <ThemeWrapper>
+          <App />
+        </ThemeWrapper>
+      </NotificationProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
