@@ -11,7 +11,7 @@ RUN npm i -g serve
 COPY . .
 
 
-RUN npm update
+# RUN npm update
 RUN npm run build
 
 EXPOSE 3000

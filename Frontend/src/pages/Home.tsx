@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/footer/Footer";
 import Battle from "/battle.svg";
 import Header from "../components/header/Header";
@@ -52,9 +52,53 @@ const GAMES = [
   },
 ];
 
-interface Props extends SFC {}
+interface Props extends SFC { }
 
-const Home = ({}: Props) => {
+interface Forecast {
+  date: string;
+  temperatureC: number;
+  temperatureF: number;
+  summary: string;
+}
+
+const Home = ({ }: Props) => {
+
+  const [forecasts, setForecasts] = useState<Forecast[]>();
+
+  useEffect(() => {
+    populateWeatherData();
+  }, []);
+
+  async function populateWeatherData() {
+    const response = await fetch('weatherforecast');
+    const data = await response.json();
+    setForecasts(data);
+  }
+
+  const contents = forecasts === undefined
+    ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
+    : <table className="table table-striped" aria-labelledby="tabelLabel">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Temp. (C)</th>
+          <th>Temp. (F)</th>
+          <th>Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        {forecasts.map(forecast =>
+          <tr key={forecast.date}>
+            <td>{forecast.date}</td>
+            <td>{forecast.temperatureC}</td>
+            <td>{forecast.temperatureF}</td>
+            <td>{forecast.summary}</td>
+          </tr>
+        )}
+      </tbody>
+    </table>;
+
+
   return (
     <div className="h-screen flex flex-1 flex-col w-screen font-mono dark:bg-dark-800 bg-light-800">
       <Header />
@@ -81,6 +125,13 @@ const Home = ({}: Props) => {
             })}
           </div>
         </div>
+
+        <div className="text-dark-50">
+          <h1 id="tabelLabel">Weather forecast</h1>
+          <p>This component demonstrates fetching data from the server.</p>
+          {contents}
+        </div>
+
       </div>
       <Footer />
     </div>

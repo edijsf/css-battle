@@ -8,7 +8,7 @@ import { useAuthContext } from "../contexts/AuthContext";
 interface Props extends SFC { }
 
 
-const AdminSingUp = ({ }: Props) => {
+const AdminSingIn = ({ }: Props) => {
   const { signin, user } = useAuthContext()
 
   const [username, setUsername] = useState('')
@@ -54,4 +54,4 @@ const AdminSingUp = ({ }: Props) => {
   );
 };
 
-export default AdminSingUp;
+export default AdminSingIn;

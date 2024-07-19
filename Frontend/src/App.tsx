@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import Play from "./pages/Play";
 import SingUp from "./pages/SignUp";
 import AdminPanel from "./pages/AdminPanel";
-import AdminSingUp from "./pages/AdminSignUp";
+import AdminSingIn from "./pages/AdminSignIn";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/signup" element={<SingUp />} />
         <Route path="/play/:gameId" element={<Play />} />
         <Route path="/admin-panel" element={<AdminPanel />} />
-        <Route path="/admin-signup" element={<AdminSingUp />} />
+        <Route path="/admin-login" element={<AdminSingIn />} />
       </Routes>
     </BrowserRouter>
   );
